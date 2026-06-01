@@ -1,0 +1,27 @@
+﻿<Window x:Class="BurgerPlus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BurgerPlus"
+        mc:Ignorable="d"
+         Title="Авторизация" Height="450" Width="800">
+    <Grid>
+        <StackPanel Grid.Row="1" Margin="5" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Введите логин:" />
+            <TextBox Height="30" Width="255" x:Name="TxbLogin" />
+            <Label Content="Введите пароль:"/>
+            <PasswordBox x:Name="PsbPassword" Height="30" Width="255" />
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="*Введи число с изображения: "/>
+                <TextBox x:Name="TxbCapchaGeneracia" Height="30" Width="79"/>
+            </StackPanel>
+            <Button x:Name="BtnGeneraitCapch" Click="BtnGeneraitCapch_Click"  Margin="5" Height="30" Width="150" Content="Сгенерировать капчу" HorizontalAlignment="Left"/>
+            <TextBox  x:Name="TxbCapchaVvod" Height="30" Width="255"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="BtnVxod" Height="30" Width="110" Click="BtnVxod_Click" Content="Войти" Margin="10" />
+                <Button x:Name="BtnCapcha" Click="BtnCapcha_Click" Height="30" Width="110" Content="Проверить капчу"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+ </Window>
